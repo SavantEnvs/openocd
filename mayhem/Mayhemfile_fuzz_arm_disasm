@@ -1,0 +1,9 @@
+project: savantenvs/openocd
+target: fuzz_arm_disasm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_arm_disasm/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_arm_disasm
+    libfuzzer: true
+    timeout: 30

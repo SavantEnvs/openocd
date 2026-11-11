@@ -1,0 +1,9 @@
+project: savantenvs/openocd
+target: fuzz_srec
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_srec/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_srec
+    libfuzzer: true
+    timeout: 30
